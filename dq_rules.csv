@@ -1,0 +1,6 @@
+﻿rule_id,rule_description,dataset_name,table_name,field_name,severity,action,error_description,rule_type,params
+R1,ID must be a positive integer <= 100000,sales,orders,id,Critical,Reject,Invalid ID,INTEGER_CHECK,"{""min"": 1, ""max"": 100000, ""allow_string_integers"": true}"
+R2,Name cannot be null or blank,sales,orders,name,Critical,Reject,Name is null/blank,NULL_CHECK,"{""treat_blank_as_null"": true}"
+R3,Order date must be valid and within range,sales,orders,order_date,Warning,Flag,Invalid or out-of-range order_date,DATE_CHECK,"{""format"": ""yyyy-MM-dd"", ""min_date"": ""2020-01-01"", ""max_date"": ""2030-12-31""}"
+R4,ID must be a positive integer <= 100000,employee,emp_table,id,Critical,Reject,Invalid ID,INTEGER_CHECK,"{""min"": 1, ""max"": 100000, ""allow_string_integers"": true}"
+R5,Name cannot be null or blank,employee,emp_table,name,Critical,Reject,Name is null/blank,NULL_CHECK,"{""treat_blank_as_null"": true}"
